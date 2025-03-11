@@ -8,6 +8,11 @@ interface ChatModel {
 
 export const chatModels: Array<ChatModel> = [
   {
+    id: 'deepseek-free',
+    name: 'SOTA reasoning model',
+    description: 'Deepseek R1 free - not secure',
+  },
+  /*{
     id: 'chat-model-small',
     name: 'Small model',
     description: 'Small model for fast, lightweight tasks',
@@ -21,5 +26,5 @@ export const chatModels: Array<ChatModel> = [
     id: 'chat-model-reasoning',
     name: 'Reasoning model',
     description: 'Uses advanced reasoning',
-  },
+  },*/
 ];
