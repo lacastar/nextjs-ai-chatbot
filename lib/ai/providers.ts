@@ -22,16 +22,19 @@ import {
 export const myProvider = isTestEnvironment
   ? customProvider({
       languageModels: {
-        'chat-model-small': chatModel,
-        'chat-model-large': chatModel,
-        'chat-model-reasoning': reasoningModel,
-        'title-model': titleModel,
-        'artifact-model': artifactModel,
+        'chat-model-small': openrouter.chat('deepseek/deepseek-chat:free'),
+        'title-model': openrouter.chat('deepseek/deepseek-r1:free'),
+        //'chat-model-small': chatModel,
+        //'chat-model-large': chatModel,
+        //'chat-model-reasoning': reasoningModel,
+        //'title-model': titleModel,
+        //'artifact-model': artifactModel,
       },
     })
   : customProvider({
       languageModels: {
-        'chat-model-small': openrouter.chat('deepseek/deepseek-r1:free')
+        'chat-model-small': openrouter.chat('deepseek/deepseek-chat:free'),
+        'title-model': openrouter.chat('deepseek/deepseek-r1:free'),
         //'chat-model-small': openai('gpt-4o-mini'),
         //'chat-model-large': openai('gpt-4o'),
         //'chat-model-reasoning': wrapLanguageModel({
