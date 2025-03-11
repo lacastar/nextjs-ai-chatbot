@@ -31,7 +31,7 @@ export const myProvider = isTestEnvironment
     })
   : customProvider({
       languageModels: {
-        'deepseek-free': openrouter.chat('deepseek/deepseek-r1:free')
+        'chat-model-small': openrouter.chat('deepseek/deepseek-r1:free')
         //'chat-model-small': openai('gpt-4o-mini'),
         //'chat-model-large': openai('gpt-4o'),
         //'chat-model-reasoning': wrapLanguageModel({
